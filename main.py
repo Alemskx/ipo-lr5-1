@@ -2,11 +2,14 @@ str=input("Введи строку:")
 print("Длина строки = ",len(str))
 glasn=0
 soglasn=0
+a = "аоуыеёиэяю"
+b = "!,.?1234567890' '"
 for i in str:
-    if i=="а" or i=="у" or i=="о" or i=="и" or i=="э" or i=="ы" or i=="я" or i=="ю" or i=="е" or i=="ё":
-        glasn+=1
-    else:
-        soglasn+=1
-
+        if i in a:
+             glasn+=1
+        elif i in b:
+             continue
+        else:
+              soglasn+=1
 print("Гласных букв = ",glasn)
 print("Согласных букв = ",soglasn)
